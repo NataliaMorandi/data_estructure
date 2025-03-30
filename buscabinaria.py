@@ -8,41 +8,22 @@ class Lista:
         self.count = 0
 
 
-    # def buscaBinaria(self):
-    #     numeroEscolhido = int(input("Digite o número que deseja buscar: "))
-    #     meio = (self.inicio + self.fim) // 2
-
-    #     while meio != numeroEscolhido:
-    #         meio = (self.inicio + self.fim) // 2
-    #         self.count +=1
-
-    #         if meio > numeroEscolhido:
-    #             self.fim = meio
-    #             meio = (self.inicio + self.fim) // 2
-
-    #         else: # meio < numeroEscolhido
-    #             self.inicio = meio
-    #             meio = (self.inicio + self.fim) // 2
-            # count +=1
-
-
     def buscaBinaria(self):
         #numeroEscolhido = int(input("Digite o número que deseja buscar: "))
         while self.inicio <= self.fim:
             meio = (self.inicio + self.fim) // 2
-            self.count += 1  # Contabiliza uma operação
+            self.count += 1  
 
             if self.lista[meio] == self.numeroEscolhido:
                 print(f"Achei o {self.numeroEscolhido} na posicao {meio} em {self.count} operacoes.")
                 return meio
             elif self.lista[meio] < self.numeroEscolhido:
-                self.inicio = meio + 1  # Ajusta o início
+                self.inicio = meio + 1  
             else:
-                self.fim = meio - 1  # Ajusta o fim
+                self.fim = meio - 1  
             
         print("Número não encontrado!")
-        return -1  # Indica que o número não está na lista
-
+        return -1  
 
 l1 = Lista(0, 50, 47)
 
