@@ -65,4 +65,4 @@ fila.adicionar(90)
 
 fila_ordenada = fila.ordenar()
 
-imprimir(fila_ordenada)
+fila.imprimir(fila_ordenada)
