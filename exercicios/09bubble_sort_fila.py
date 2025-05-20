@@ -39,7 +39,7 @@ class Fila:
                 if no_atual.nome > no_atual.proximo.nome: # C > B
                     auxiliar = no_atual.proximo           # aux = 200 (B)
                     no_atual.proximo = auxiliar.proximo   # no_atual.prox = 300 (E)
-                    self.inicio.proximo = auxiliar        # aux.prox = C100
+                    auxiliar.proximo = no_atual        # aux.prox = C100
                 
                     if no_anterior is not None:           # só entra aqui em trocas que não são logo no [0] com [1]
                         no_anterior.proximo = auxiliar    # faz a troca entre o menor e o maior. ex: passa o A p/tras do F
